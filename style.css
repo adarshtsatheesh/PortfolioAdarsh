@@ -46,9 +46,28 @@
 
 /* Hero section */
 
+@media (max-width: 575.98px) {
+    .hero .container .row .hero-content h1 {
+      font-size: 2rem;
+    }
+    .hero .container .row .hero-content p {
+      font-size: 1rem;
+    }
+    .hero .container .row .icons a i {
+      font-size: 1.5rem;
+    }
+    .hero .container .row img.img-xs {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px; 
+    }
+  }
+  
+
+
 .hero{
-    height: auto;
     background-color: #f3e9e1;
+    
 }
 
 
@@ -71,7 +90,7 @@
   }
   .hero .container .row img:hover{
 
-    transform: scale(1.1); /* Increase the scale to make the image bigger */
+    transform: scale(1.1); 
 
   } 
   
@@ -106,7 +125,7 @@
 }
 
 
-.button {
+.hero .container .row .button {
 
   appearance: none;
   background-color: #FFFFFF;
@@ -116,7 +135,7 @@
   color: #3B3B3B;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Robert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -134,18 +153,18 @@
   width: 160px;
 }
 
-.button:disabled {
+.hero .container .row .button:disabled {
   pointer-events: none;
 }
 
-.button:hover {
+.hero .container .row .button:hover {
   color: #fff;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-.button:active {
+.hero .container .row .button:active {
   box-shadow: none;
   transform: translateY(0);
 }

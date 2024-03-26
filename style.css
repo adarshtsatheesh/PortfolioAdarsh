@@ -1,8 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
   border: 0;
   padding: 0;
 }
+
+body{
+  background-color: #f7ffff;
+  font-family: 'Roboto', sans-serif;
+  cursor: none;
+
+}
+
+/* HEADING */
+
+.heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold; 
+  color: #333; 
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px; 
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+
+.heading::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.heading-row{
+  padding-bottom: 60px;
+}
+
+
+
 
 /* Header section */
 
@@ -190,6 +231,139 @@
 /* About section */
 
 .about {
-  height: 100vh;
-  background-color: #bebbc6;
+  padding: 80px 0;
+  margin-bottom: 60px;
 }
+
+
+
+.about .row img {
+  height: 400px;
+  border-radius: 5px;
+
+  transition: transform 0.3s ease;
+  overflow: hidden;
+
+
+  --s: 15px; /* control the size */
+  padding: var(--s);
+  border: var(--s) solid #0000;
+  background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
+  clip-path: 
+    polygon(
+      0    0   ,33%  0   ,50% calc(2*var(--s))       ,66%  0,
+      100% 0   ,100% 33% ,calc(100% - 2*var(--s)) 50%,100% 66%,
+      100% 100%,66%  100%,50% calc(100% - 2*var(--s)),33%  100%,
+      0    100%,0    66% ,calc(2*var(--s)) 50%       ,0    33%
+    )
+}
+
+.about .row img:hover {
+  transform: scale(1.1);
+}
+
+
+
+.about p {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-size: 1.1rem; /* Adjust font size as needed */
+  line-height: 1.6; /* Set line height for improved readability */
+  color: #666; /* Set text color */
+  text-align: justify; /* Justify text for a clean appearance */
+  margin-bottom: 30px; /* Add bottom margin for spacing */
+}
+
+.about .details-row h3{
+
+  color: #74a99c;
+  padding-bottom: 20px;
+  /* #b0cdc7 */
+}
+
+.about .details-row ul {
+  list-style: none; /* Remove default list-style */
+  font-family: 'Roboto',sans-serif;
+  font-size: 18px;
+}
+
+.about .details-row ul li{
+  padding-bottom: 10px;
+}
+
+.about .details-row ul li i{
+  padding-right: 8px;
+  color: #74a99c;
+}
+
+.about .details-row ul li strong{
+  color: #45505b;
+  padding-right: 10px;
+}
+
+.about .details-row ul li span{
+  color: #454648;
+}
+
+
+/* Services  */
+.services{
+  height: 100vh;
+  background-color: #45505b;
+}
+
+
+
+
+
+
+
+/* Custom cursor */
+
+/* Styles for the custom cursor */
+
+
+
+
+.small,
+.big {
+  position: fixed; /* Ensure the cursor moves with the viewport */
+  z-index: 9999; /* Ensure the cursor appears above other elements */
+}
+
+.small {
+  width: 6px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none; /* Ensure the cursor doesn't interfere with mouse events */
+}
+
+
+.big {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  animation-name: stretch;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+@keyframes stretch {
+  0% {
+    opacity: 0.2;
+    background-color: green;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: red;
+  }
+}
+

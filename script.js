@@ -14,20 +14,36 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 
-
 // Cursor
-const cursorSmall = document.querySelector('.small');
 const cursorBig = document.querySelector('.big');
+const cursorSmall = document.querySelector('.small');
 
-
-const positionElement = (e)=> {
+const positionElement = (e) => {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
-   
-  cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-  
-  cursorBig.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
- 
-}
+  cursorBig.style.top = `${mouseY}px`;
+  cursorBig.style.left = `${mouseX}px`;
+  cursorSmall.style.top = `${mouseY}px`;
+  cursorSmall.style.left = `${mouseX}px`;
+};
 
-window.addEventListener('mousemove', positionElement)
+window.addEventListener('mousemove', positionElement);
+
+// Change cursor size on link hover
+const links = document.querySelectorAll('a');
+
+links.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    cursorBig.style.display = 'none';
+    cursorSmall.style.display = 'block';
+  });
+
+  link.addEventListener('mouseleave', () => {
+    cursorBig.style.display = 'block';
+    cursorSmall.style.display = 'none';
+  });
+});
+
+
+
+

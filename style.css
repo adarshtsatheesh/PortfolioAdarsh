@@ -1,141 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-*{
-    border: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+  border: 0;
+  padding: 0;
 }
 
 /* Header section */
-.header .navbar{
-    border: 0;
-    background-color: #262626;
 
+.header i{
+
+  border: 0;
+  color: #000;
 }
-.header .navbar .container-fluid{
-
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 0 100px;
-
+.header .navbar {
+  border: 0;
+  background-color: #FFFFFF;
 }
-
-.header .navbar .container-fluid a{
-
-    color: #FFFFFF;
+.header .navbar .container-fluid {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0 100px;
 }
 
-.header nav .navbar-brand{
-    padding: 10px;
-    font-size: 30px;
-    font-weight: 500;
-    font-family: "Lobster Two", sans-serif;
+.header .navbar .container-fluid a {
+  color: black;
+}
+
+.header nav .navbar-brand {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Lobster Two", sans-serif;
 }
 
 .custom-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .centered-item {
-    margin-bottom: 10px; 
-  }
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.centered-item {
+  margin-bottom: 10px;
+}
 
 /* Hero section */
+@media (max-width: 991px) {
+  .hero .container .row .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero .container .row .hero-content p {
+    font-size: 2rem;
+  }
+  .hero .container .row .icons a i {
+    font-size: 1.5rem;
+  }
+  .hero .container .row img.img-xs {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+}
 
 @media (max-width: 575.98px) {
-    .hero .container .row .hero-content h1 {
-      font-size: 2rem;
-    }
-    .hero .container .row .hero-content p {
-      font-size: 1rem;
-    }
-    .hero .container .row .icons a i {
-      font-size: 1.5rem;
-    }
-    .hero .container .row img.img-xs {
-      max-width: 100%;
-      height: auto;
-      max-height: 300px; 
-    }
+  .hero .container .row .hero-content h1 {
+    font-size: 2rem;
   }
-  
-
-
-.hero{
-    background-color: #f3e9e1;
-    
+  .hero .container .row .hero-content p {
+    font-size: 1rem;
+  }
+  .hero .container .row .icons a i {
+    font-size: 1.5rem;
+  }
+  .hero .container .row img.img-xs {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
 }
 
+.hero {
+  background-color: #f7ffff;
+}
 
 .hero .container .row img {
-    transition: transform 0.3s ease;
-    overflow: hidden;
+  transition: transform 0.3s ease;
+  overflow: hidden;
 
-    height: 400px;
-    --s: 15px; 
-    padding: var(--s);
-    border: var(--s) solid #0000;
-    background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
-    clip-path: 
-      polygon(
-        0    0   ,33%  0   ,50% calc(2*var(--s))       ,66%  0,
-        100% 0   ,100% 33% ,calc(100% - 2*var(--s)) 50%,100% 66%,
-        100% 100%,66%  100%,50% calc(100% - 2*var(--s)),33%  100%,
-        0    100%,0    66% ,calc(2*var(--s)) 50%       ,0    33%
-      )
-  }
-  .hero .container .row img:hover{
-
-    transform: scale(1.1); 
-
-  } 
-  
+  height: 400px;
+  --s: 15px;
+  padding: var(--s);
+  border: var(--s) solid #0000;
+  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  clip-path: polygon(
+    0 0,
+    33% 0,
+    50% calc(2 * var(--s)),
+    66% 0,
+    100% 0,
+    100% 33%,
+    calc(100% - 2 * var(--s)) 50%,
+    100% 66%,
+    100% 100%,
+    66% 100%,
+    50% calc(100% - 2 * var(--s)),
+    33% 100%,
+    0 100%,
+    0 66%,
+    calc(2 * var(--s)) 50%,
+    0 33%
+  );
+}
+.hero .container .row img:hover {
+  transform: scale(1.1);
+}
 
 .hero .container .row {
-    height: 100vh;
+  height: 100vh;
 }
 
-.hero .container .row h1{
-    font-weight: 900;
-    font-size: 40px;
+.hero .container .row h1 {
+  /* font-weight: 900; */
+  font-size: 70px;
+  font-family: "Changa", sans-serif;}
+
+.hero .container .row p {
+  font-size: 40px;
+  font-weight: 800;
+  color: #9c9fa5;
 }
 
-.hero .container .row p{
-    font-size: 30px;
-    font-weight: 800;
-    color: #9c9fa5;
+.hero .container .row .icons {
+  margin: 20px;
+  margin-left: 43px;
 }
 
-.hero .container .row .icons{
-    margin: 20px;
-    margin-left: 43px;
+.hero .container .row .icons a {
+  color: #45505b;
 }
-
-.hero .container .row .icons a{
-    color: #45505b;
+.hero .container .row .icons a i {
+  margin-right: 20px;
+  font-size: 20px;
 }
-.hero .container .row .icons a i{
-
-    margin-right: 20px;
-    font-size: 20px;
-}
-
 
 .hero .container .row .button {
-
   appearance: none;
-  background-color: #FFFFFF;
-  border: 2px solid #1A1A1A;
+  background-color: #ffffff;
+  border: 2px solid #1a1a1a;
   border-radius: 15px;
   box-sizing: border-box;
-  color: #3B3B3B;
+  color: #3b3b3b;
   cursor: pointer;
   display: inline-block;
-  font-family: Robert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Robert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -145,7 +163,7 @@
   padding: 16px 24px;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -159,7 +177,7 @@
 
 .hero .container .row .button:hover {
   color: #fff;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
@@ -171,7 +189,7 @@
 
 /* About section */
 
-.about{
-    height: 100vh;
-    background-color: #bebbc6;
+.about {
+  height: 100vh;
+  background-color: #bebbc6;
 }

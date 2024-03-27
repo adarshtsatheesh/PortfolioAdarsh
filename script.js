@@ -45,5 +45,18 @@ links.forEach(link => {
 });
 
 
-
+// Skills
+let skillsContent = document.querySelector('.skills-content');
+if (skillsContent) {
+  new Waypoint({
+    element: skillsContent,
+    offset: '80%',
+    handler: function(direction) {
+      let progressBars = document.querySelectorAll('.progress-bar');
+      progressBars.forEach((bar) => {
+        bar.style.width = bar.getAttribute('aria-valuenow') + '%';
+      });
+    }
+  });
+}
 

@@ -305,11 +305,104 @@ body{
 }
 
 
-/* Services  */
-.services{
-  height: 100vh;
-  background-color: #45505b;
+
+/* Skills */
+
+
+.skills{
+
+  padding: 100px 0;
 }
+
+.skills .container{
+  padding: 50px;
+}
+.skill-name {
+  margin-right: 10px; /* Adjust spacing between text and percentage */
+}
+
+
+.skills .val {
+float: right;}
+
+.skill-name {
+  display: block;
+  margin-bottom: 5px;
+}
+.progress{
+  height: 10px;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .skills-content .skill-name{
+  padding-top: 10px;
+}
+
+.progress-bar {
+  background-color: #29b4a0;
+  transition: width 1s ease-in-out; /* Adjust timing here */
+}
+
+
+
+/* Default styles */
+
+
+/* Medium and large screens */
+@media (min-width: 768px) {
+  .card {
+    max-width: 420px; /* Set maximum width for cards */
+    margin-right: 15px; /* Adjust spacing between cards */
+    margin-left: 15px; /* Adjust spacing between cards */
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    max-width: 320px; /* Set maximum width for cards */
+  }
+}
+
+
+/* Small screens */
+@media (max-width: 576px) {
+  .card {
+    max-width: 250px; 
+  }
+}
+
+
+.services {
+  padding: 100px 50px;
+}
+
+.services .cards-row .card {
+  padding: 30px;
+  background-color: #262626;
+  color: #FFFFFF;
+  height: 320px;
+  width: 100%; /* Make cards full width */
+  max-width: 400px; /* Set maximum width for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Colored shadow */
+  transition: all 0.3s ease; /* Transition for smooth color change and hovering */
+  margin-bottom: 40px;
+}
+
+.services .cards-row .card:hover {
+  transform: translateY(-5px); /* Move up on hover */
+  background-color: #ff1d4e;
+}
+
+.services .cards-row .card .icon i {
+  font-size: 50px;
+  font-weight: 900;
+}
+
 
 
 
